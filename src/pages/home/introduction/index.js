@@ -20,7 +20,7 @@ const Title = styled.h4`
         margin-right: 50px;
     }
     @media (max-width: 600px) {
-        font-size: 32px;
+        font-size: 25px;
     }
 `;
 
