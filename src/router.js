@@ -3,19 +3,19 @@ import Layout from "./components/layout";
 
 import * as Pages from "./pages";
 
-const Rotas = () => {
+const Router = () => {
     return(
         <BrowserRouter>
             <Switch>
                 <Layout>
                     <Route exact path="/" component={Pages.Home} />     
-                    <Route exact path="/Experiências" component={Pages.Experience} />        
-                    <Route exact path="/Portfólio" component={Pages.PageWeb} />
-                    <Route exact path="/Contato" component={Pages.Contact} />        
+                    <Route exact path="/experiences" component={Pages.Experience} />        
+                    <Route exact path="/portfolio" component={Pages.PageWeb} />
+                    <Route exact path="/contact" component={Pages.Contact} />        
                 </Layout>
             </Switch>
         </BrowserRouter>
     );
 }
 
-export default Rotas;
+export default Router;

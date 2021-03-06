@@ -4,12 +4,14 @@ import styled from 'styled-components';
 
 import React from 'react';
 
-export const Menu = () => {
+export const Menu = (props) => {
 
   const Title = styled.h1`
       margin: 7px;
       font-size: 25px;
       font-weight: bold;
+      font-family: times new roman;
+      font-style: italic;
       color: #04C740;
     `;
 
@@ -42,24 +44,24 @@ export const Menu = () => {
     },
     {
       label: "Experiências",
-      path: "Experiências"
+      path: "experiences"
     },
     {
       label: "Portfólio",
-      path: "Portfólio"
+      path: "portfolio"
     },
     {
       label: "Contato",
-      path: "Contato"
+      path: "contact"
     },
   ];
   
     return(
-      <Navbar collapseOnSelect expand="lg" bg="dark"  variant="dark" >
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
         <Container>
   
           <Navbar.Brand>
-            <Title>Emerson Pereira</Title>
+            <Title>Dev. FullStack</Title>
           </Navbar.Brand>
   
           <Toggle aria-controls="responsive-navbar-nav">
@@ -67,7 +69,7 @@ export const Menu = () => {
   
           <NavMenu id="menu-topo">
             <Nav className="menu m-auto">
-  
+      
               {menuItens.map((iten) => (
                 <Nav.Item>
                   <ItensMenu className="item" onClick={() => history.push(`/${iten.path}`)}>

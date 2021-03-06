@@ -9,7 +9,7 @@ import { FaGraduationCap, FaLandmark, FaSchool, FaRegCalendarAlt } from 'react-i
 const Card = styled.div`
     &{  
         max-width: 700px;
-        width: 90%;
+        width: 80%;
         margin-top: 40px;
         margin-right: auto;
         margin-left: auto;
@@ -43,6 +43,7 @@ const Card1 = styled.div`
 const Card2 = styled.div`
     &{  
         display: flex;
+        width: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -55,7 +56,7 @@ const Card2 = styled.div`
         filter: blur(15px);
     }
     @media (max-width: 600px) {
-        height: 350px;
+        
     }
    
 
@@ -63,8 +64,10 @@ const Card2 = styled.div`
 
 const Title = styled.h2`
     font-size: 28px;
-    color: #E1E1E6;
+    color: #04C740;
     text-align: center;
+    font-family: times new roman;
+    font-style: italic;
 `;
 
 const Linha = styled(Row)`

@@ -43,7 +43,8 @@ const Card1 = styled.div`
 
 const Title = styled.h2`
     font-size: 28px;
-    color: #E1E1E6;
+    color: #04C740;
+    font-weight: bold;
     text-align: center;
 `;
 

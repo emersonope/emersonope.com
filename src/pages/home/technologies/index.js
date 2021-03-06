@@ -61,8 +61,10 @@ const Card2 = styled.div`
 
 const Title = styled.h2`
     font-size: 28px;
-    color: #E1E1E6;
+    color: #04C740;
     text-align: center;
+    font-family: times new roman;
+    font-style: italic;
 `;
 
 const Linha = styled(Row)`
@@ -104,36 +106,15 @@ const Texto = styled.h4`
     &{
         margin-right: 40px;
         margin-left: 40px;
-        font-size: 20px;
+        text-indent: 1.5em;
+        font-family: times new roman;
+        font-style: italic;
+        font-size: 25px;
         color: #A1A1A6;
         text-align: left;
     }
     @media (max-width: 600px) {
         font-size: 18px;
-    }
-`;
-
-const Texto2 = styled.h5`
-    &{
-        margin-right: 40px;
-        margin-left: 40px;
-        font-size: 16px;
-        color: #A1A1A6; 
-    }
-    @media (max-width: 600px) {
-        font-size: 15px;
-    }
-`;
-
-const Texto3 = styled.h6`
-    &{
-        margin-right: 40px;
-        margin-left: 40px;
-        font-size: 14px;
-        color: #A1A1A6;
-    }
-    @media (max-width: 600px) {
-        font-size: 13px;
     }
 `;
 
