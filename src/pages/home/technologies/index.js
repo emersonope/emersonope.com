@@ -9,7 +9,8 @@ import { FaHtml5 , FaCss3Alt, FaReact, FaPython, FaBootstrap } from 'react-icons
 const Card = styled.div`
     &{  
         width: 90%;
-        margin-top: 40px;
+        margin-top: 0px;
+        margin-bottom: 0px;
         margin-right: auto;
         margin-left: auto;
         padding: 30px;
@@ -20,7 +21,7 @@ const Card = styled.div`
         filter: blur(15px);
     }
     @media (max-width: 600px) {
-        height: 530px;
+        height: 100%;
     }
 `;
 
@@ -29,6 +30,8 @@ const Card1 = styled.div`
         margin-top: 40px;
         margin-right: auto;
         margin-left: auto;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 0px;
         padding: 30px;
         border-radius: 20px;
@@ -53,18 +56,22 @@ const Card2 = styled.div`
         filter: blur(15px);
     }
     @media (max-width: 600px) {
-        height: 350px;
+        height: 100%;
+        width: 100%;
     }
-   
-
 `;
 
 const Title = styled.h2`
-    font-size: 28px;
-    color: #04C740;
-    text-align: center;
-    font-family: times new roman;
-    font-style: italic;
+    &{
+        font-size: 28px;
+        color: #04C740;
+        text-align: center;
+        font-family: times new roman;
+        font-style: italic;
+    }
+    @media (max-width: 600px) {
+        text-align: center;
+    }
 `;
 
 const Linha = styled(Row)`
@@ -75,8 +82,7 @@ const Linha = styled(Row)`
         margin-bottom: 4px;   
     }
     @media (max-width: 600px) {
-        margin-bottom: 0px;
-        margin-top: 0px;
+       
     }
 `;
 
@@ -86,6 +92,7 @@ const Coluna = styled(Col)`
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
+    margin: 0 auto;
     padding: 0;
     }
     @media (max-width: 600px) {
@@ -115,6 +122,9 @@ const Texto = styled.h4`
     }
     @media (max-width: 600px) {
         font-size: 18px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 `;
 
@@ -133,16 +143,11 @@ export const Technologies = () => {
                 <Coluna xl={12}>
                     <Card2>
                         <Linha>
-                            <Degree1 >
                                 <Texto> HTML, CSS, JavaScript, React, Python, Bootstrap</Texto>
-                            </Degree1>
                         </Linha>
                         <Linha>
-                            <Degree1 >
                                 <Texto><FaHtml5 /> <FaCss3Alt /> < FaReact /> <FaPython /> < FaBootstrap /></Texto>
-                            </Degree1>
                         </Linha>
-                   
                     </Card2>
                </Coluna>
             </Linha>

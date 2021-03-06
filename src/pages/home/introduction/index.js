@@ -6,7 +6,8 @@ import ImgFoto from '../../../assets/images/home/emersonope.jpg';
 const Section1 = styled.div`
     justify-content: center;
     align-items: center;
-    margin: 50px 20px 0;
+    margin: 15px 0px 0px 0px;
+    overflow: hidden;
 `;
 
 const Title = styled.h4`
