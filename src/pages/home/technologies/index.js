@@ -1,5 +1,5 @@
 import { Col, Row } from "react-bootstrap";
-import styled, {keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import React from 'react';
 
@@ -91,12 +91,12 @@ const Linha = styled(Row)`
 
 const Coluna = styled(Col)`
     &{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
     }
     @media (max-width: 600px) {
         margin-bottom: 4px;
@@ -192,19 +192,19 @@ const JsIcon = styled(IoLogoJavascript)`
 const MyProvider = ({className, children}) => <IconContext.Provider value={{className}}> {children} </IconContext.Provider>
 
 const IconHtml = styled(MyProvider)`
-        color: rgb(221, 75, 37); 
-        font-size: 2.5em;
-        margin-right: 8px;
-        margin-left: 8px;
-        margin-bottom: 8px;
+    color: rgb(221, 75, 37); 
+    font-size: 2.5em;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
 `;
 
 const IconCss = styled(MyProvider)`
-        color: rgb(12%, 56%, 100%); 
-        font-size: 2.5em;
-        margin-right: 8px;
-        margin-left: 8px;
-        margin-bottom: 8px;
+    color: rgb(12%, 56%, 100%); 
+    font-size: 2.5em;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
 `;
 
 const IconNode = styled(MyProvider)`
@@ -216,33 +216,33 @@ const IconNode = styled(MyProvider)`
 `;
 
 const IconReact = styled(MyProvider)`
-        color: rgb(8%, 45%, 71%); 
-        font-size: 2.5em;
-        margin-right: 8px;
-        margin-left: 8px;
-        margin-bottom: 8px;
+    color: rgb(8%, 45%, 71%); 
+    font-size: 2.5em;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
 `;
 
 const IconPy = styled(MyProvider)`
-        color: rgb(0%, 15%, 31%); 
-        font-size: 2.5em;
-        margin-right: 8px;
-        margin-left: 8px;
-        margin-bottom: 8px;
+    color: rgb(0%, 15%, 31%); 
+    font-size: 2.5em;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
 `;
 
 const IconBtp = styled(MyProvider)`
-        color: rgb(42%, 21%, 68%); 
-        font-size: 2.5em;
-        margin-right: 8px;
-        margin-bottom: 8px;
+    color: rgb(42%, 21%, 68%); 
+    font-size: 2.5em;
+    margin-right: 8px;
+    margin-bottom: 8px;
 `;
 
 const IconJs = styled(MyProvider)`
-        color: rgb(94%, 85%, 11%); 
-        font-size: 2.5em;
-        margin-right: 8px;
-        margin-bottom: 8px;
+    color: rgb(94%, 85%, 11%); 
+    font-size: 2.5em;
+    margin-right: 8px;
+     margin-bottom: 8px;
 `;
 
 export const Technologies = () => {

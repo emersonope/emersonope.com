@@ -1,16 +1,18 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Table } from "react-bootstrap";
 import styled from 'styled-components';
 
 import React from 'react';
 
+import { IconContext } from "react-icons";
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import { FaGithub, FaLinkedin} from 'react-icons/fa';
 
 
 const Card = styled.div`
     &{  
-        max-width: 345px;
-        width: 90%;
+        text-align: left;
+        max-width: 400px;
+        width: 100%;
         heigt: 100%;
         margin-top: 40px;
         margin-right: auto;
@@ -24,28 +26,22 @@ const Card = styled.div`
         filter: blur(15px);
     }
     @media (max-width: 600px) {
+        max-width: 310px;
+        text-align: left;
         height: 100%;
+        width: 100%;
+        
     }
-`;
-
-const Card1 = styled.div`
-    &{  
-        margin-top: 40px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 0px;
-        padding: 30px;
-        border-radius: 20px;
-        overflow: hidden;
-    }
-   
 `;
 
 const Title = styled.h2`
-    font-size: 28px;
-    color: #04C740;
-    font-weight: bold;
-    text-align: center;
+    &{
+        text-align: center;
+        font-size: 28px;
+        color: #04C740;
+        font-family: times new roman;
+        font-style: italic;
+    }
 `;
 
 const Linha = styled(Row)`
@@ -93,6 +89,47 @@ const Texto = styled.h4`
     }
 `;
 
+const Tab = styled(Table)``;
+
+const TabTd = styled.td`
+    &{
+        border-top: none !important;
+        color: #E1E1E6;
+    }
+    &:hover {
+        color: #8257E6;
+    }
+
+`;
+
+const TabTh = styled.th`
+    display: flex;
+    border-top: none !important;
+    justify-content: center;
+    align-items: center;
+`;
+
+const MyProvider = ({className, children}) => <IconContext.Provider value={{className}}> {children} </IconContext.Provider>
+
+const IconGit = styled(MyProvider)`
+    color: rgb(91%, 31%, 19%); 
+    font-size: 2em;
+`;
+
+const IconLn = styled(MyProvider)`
+    color: rgb(65%, 49%, 33%);
+    font-size: 2em;
+`;
+
+const IconMail = styled(MyProvider)`
+    color: rgb(58%, 24%, 49%);
+    font-size: 2em;
+`;
+const IconWhats = styled(MyProvider)`
+    color: rgb(28%, 78%, 34%);
+    font-size: 2em;
+`;
+
 
 
 const CardContato = (props) => {
@@ -106,17 +143,48 @@ const CardContato = (props) => {
                             <Title> {props.titulo} </Title>
                 </Coluna>
                 <Coluna xl={12}>
-                        <Linha>
-                                <Texto onClick={() => window.open(props.git)}> <FaGithub /> {props.github}</Texto>
-                                <Texto onClick={() => window.open(props.lnk)}> <FaLinkedin /> {props.ln}</Texto>
-                                <Texto onClick={() => window.open('mailto:emersonope@gmail.com')}> <AiOutlineMail /> {props.email}</Texto>
-                                <Texto onClick={() => window.open(props.zap)}>  <AiOutlineWhatsApp /> {props.whats} </Texto>
-                        </Linha>                   
-               </Coluna>
+                    <Linha>
+                        <Tab>
+                            <tbody>
+                                <tr>
+                                    <TabTh>
+                                        <IconGit >
+                                            <FaGithub />
+                                        </IconGit>
+                                    </TabTh>
+                                    <TabTd onClick={() => window.open(props.git)}> {props.github} </TabTd>
+                                </tr>
+                                <tr>
+                                    <TabTh>
+                                        <IconLn >
+                                            <FaLinkedin />
+                                        </IconLn>
+                                    </TabTh>
+                                    <TabTd onClick={() => window.open(props.lnk)}> {props.ln} </TabTd>
+                                </tr>
+                                <tr>
+                                    <TabTh>
+                                        <IconMail >
+                                            <AiOutlineMail />
+                                        </IconMail>
+                                    </TabTh>
+                                    <TabTd onClick={() => window.open('mailto:emersonope@gmail.com')}> {props.email} </TabTd>
+                                </tr>
+                                <tr>
+                                    <TabTh>
+                                        <IconWhats >
+                                            <AiOutlineWhatsApp />
+                                        </IconWhats>
+                                    </TabTh>
+                                    <TabTd onClick={() => window.open(props.zap)}> {props.whats} </TabTd>
+                                </tr>
+                            </tbody>
+                        </Tab>                     
+                    </Linha>                   
+                </Coluna>
             </Linha>
         </Card>
       )
   };
-  
   
   export default CardContato;

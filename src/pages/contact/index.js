@@ -14,11 +14,11 @@ const Contact = () => {
     return (
         <Section1>
             <Contact1 titulo={'Emerson Pereira'} 
-            foto={ImgFoto} texto={'HTML, CSS, JavaScript, React, Python, Bootstrap'} 
+            foto={ImgFoto} texto={'HTML, CSS, JavaScript, Nodejs, React, Python, Bootstrap'} 
             texto1={''} />
 
-            <CardContato  titulo='Contato' whats={'(11) 9 5214 3624'}
-            github={'github'} ln={'Linkedin'} email={'email'} 
+            <CardContato  titulo='Contato' whats={'WhatsApp: (11) 9 5214 3624'}
+            github={'github: @emersonope'} ln={'Linkedin: @emersonope'} email={'email: emersonope@gmail.com'} 
             git={'https://github.com/emersonope'}
             lnk={'https://www.linkedin.com/in/emersonope/'}
             mail={'emersonope@gmail.com'} 

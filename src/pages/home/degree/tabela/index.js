@@ -28,13 +28,6 @@ const Card = styled.div`
     }
 `;
 
-const Card1 = styled(Col)`
-
-`;
-const Card2 = styled(Col)`
-    
-`;
-
 const Linha = styled(Row)`
     &{
         height: 50%;
@@ -96,12 +89,12 @@ const Tabela = (props) => {
         <Card>
             <Linha>
                 
-                <Card1 xl={6}><Title>Formação</Title></Card1>
+                <Col xl={6}><Title>Formação</Title></Col>
               
               
-                <Card2 xl={6}> 
-                <Tab>
-                        <tbody>
+                <Col xl={6}> 
+                    <Tab>
+                            <tbody>
                             <tr>
                                 <TabTh>
                                     <IconFacu >
@@ -131,7 +124,7 @@ const Tabela = (props) => {
                     <Tab>
                         <tbody>
                             <tr>
-                                <TabTh>
+                                 <TabTh>
                                     <IconFacu >
                                         <FaGraduationCap  />
                                     </IconFacu>
@@ -156,7 +149,7 @@ const Tabela = (props) => {
                             </tr>
                         </tbody>
                     </Tab>
-                </Card2>
+                </Col>
                
             </Linha>
         </Card>
