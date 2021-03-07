@@ -21,7 +21,10 @@ const Card = styled.div`
         filter: blur(15px);
     }
     @media (max-width: 600px) {
-        height: 530px;
+        height: 100%;
+        width: 83%;
+        margin-right: auto;
+        margin-left: auto;
     }
 `;
 
