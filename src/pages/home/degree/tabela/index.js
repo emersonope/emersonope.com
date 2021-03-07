@@ -48,13 +48,17 @@ const Linha = styled(Row)`
     }
 `;
 
-const Tab = styled(Table)`
- 
-`;
+const Tab = styled(Table)``;
 
 const TabTd = styled.td`
-    border-top: none !important;
-    color: #E1E1E6;
+    &{
+        border-top: none !important;
+        color: #E1E1E6;
+    }
+    &:hover {
+        color: #8257E6;
+    }
+
 `;
 
 const TabTh = styled.th`

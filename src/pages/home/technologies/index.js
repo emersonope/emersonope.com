@@ -1,10 +1,11 @@
 import { Col, Row } from "react-bootstrap";
-import styled, {keyframes} from 'styled-components';
+import styled, {keyframes } from 'styled-components';
 
 import React from 'react';
 
 import { IconContext } from "react-icons";
-import { FaHtml5 , FaCss3Alt, FaReact, FaPython, FaBootstrap } from 'react-icons/fa';
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaHtml5 , FaCss3Alt, FaReact, FaNodeJs, FaPython, FaBootstrap } from 'react-icons/fa';
 
 
 const Card = styled.div`
@@ -59,6 +60,8 @@ const Card2 = styled.div`
     @media (max-width: 600px) {
         height: 100%;
         width: 100%;
+
+        align-items: center;
     }
 `;
 
@@ -76,6 +79,13 @@ const Linha = styled(Row)`
         height: 50%;
         margin-top: auto;
         margin-bottom: 4px;   
+    }
+    @media (max-width: 600px) {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        
     }
 `;
 
@@ -115,7 +125,7 @@ const Texto = styled.h4`
         justify-content: center;
     }
 `;
-
+/* animações */
 const animate = keyframes`
     from {
         transform: rotate(0deg);
@@ -124,13 +134,59 @@ const animate = keyframes`
         transform: rotate(360deg);
     }
 `;
+const animate1 = keyframes`
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(0deg);}
+`;
+
+const bounce = keyframes`
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-7px) }
+    100% {transform: translateY(0px) }
+}
+`;
+const bounce1 = keyframes`
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(7px) }
+    80% { transform: translateY(-7px) }
+    100% {transform: translateY(0px) }
+}
+`;
+
+
+const goBack = keyframes`
+    0% { transform: translateX(4px);; }
+    50% { transform: translateX(0); }
+    100% {transform: translateX(4px); }
+`;
+
 
 const HtmlIcon = styled(FaHtml5)`
-   animation: ${animate} 10s linear infinite;
+   animation: ${bounce}  10s linear infinite;
 `;
 
 const ReactIcon = styled(FaReact)`
-   animation: ${animate} 10s linear infinite;
+   animation: ${animate} 4s linear infinite;
+`;
+
+const CssIcon = styled(FaCss3Alt)`
+   animation: ${bounce1} 10s linear infinite;
+`;
+const BtsIcon = styled(FaBootstrap)`
+   animation: ${bounce1} 10s linear infinite;
+`;
+
+const PyIcon = styled(FaPython)`
+   animation: ${animate1} 4s linear infinite;
+`;
+
+const NjsIcon = styled(FaNodeJs)`
+   animation: ${goBack} 4s linear infinite;
+`;
+
+const JsIcon = styled(IoLogoJavascript)`
+   animation: ${goBack} 4s linear infinite;
 `;
 
 const MyProvider = ({className, children}) => <IconContext.Provider value={{className}}> {children} </IconContext.Provider>
@@ -140,6 +196,7 @@ const IconHtml = styled(MyProvider)`
         font-size: 2.5em;
         margin-right: 8px;
         margin-left: 8px;
+        margin-bottom: 8px;
 `;
 
 const IconCss = styled(MyProvider)`
@@ -147,6 +204,15 @@ const IconCss = styled(MyProvider)`
         font-size: 2.5em;
         margin-right: 8px;
         margin-left: 8px;
+        margin-bottom: 8px;
+`;
+
+const IconNode = styled(MyProvider)`
+    color: rgb(33%, 63%, 27%); 
+    font-size: 2.5em;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
 `;
 
 const IconReact = styled(MyProvider)`
@@ -154,6 +220,7 @@ const IconReact = styled(MyProvider)`
         font-size: 2.5em;
         margin-right: 8px;
         margin-left: 8px;
+        margin-bottom: 8px;
 `;
 
 const IconPy = styled(MyProvider)`
@@ -161,12 +228,21 @@ const IconPy = styled(MyProvider)`
         font-size: 2.5em;
         margin-right: 8px;
         margin-left: 8px;
+        margin-bottom: 8px;
 `;
 
 const IconBtp = styled(MyProvider)`
         color: rgb(42%, 21%, 68%); 
         font-size: 2.5em;
         margin-right: 8px;
+        margin-bottom: 8px;
+`;
+
+const IconJs = styled(MyProvider)`
+        color: rgb(94%, 85%, 11%); 
+        font-size: 2.5em;
+        margin-right: 8px;
+        margin-bottom: 8px;
 `;
 
 export const Technologies = () => {
@@ -184,23 +260,29 @@ export const Technologies = () => {
                 <Coluna xl={12}>
                     <Card2>
                         <Linha>
-                                <Texto> HTML, CSS, JavaScript, React, Python, Bootstrap</Texto>
+                                <Texto> HTML, CSS, JavaScript, Nodejs, React, Python, Bootstrap</Texto>
                         </Linha>
                         <Linha>
                                 <IconHtml>
                                     <HtmlIcon />
                                 </IconHtml>
                                 <IconCss>
-                                    <FaCss3Alt />
+                                    <CssIcon />
                                 </IconCss>
+                                <IconJs>
+                                    <JsIcon />
+                                </IconJs>
+                                <IconNode>
+                                    <NjsIcon />
+                                </IconNode>
                                 <IconReact>
-                                    < ReactIcon />
+                                    <ReactIcon />
                                 </IconReact>
                                 <IconPy>
-                                    <FaPython />
+                                    <PyIcon />
                                 </IconPy>
                                 <IconBtp>
-                                    < FaBootstrap />
+                                    <BtsIcon />
                                 </IconBtp>
                                 
                         </Linha>
