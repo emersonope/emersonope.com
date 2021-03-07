@@ -1,8 +1,9 @@
 import { Col, Row } from "react-bootstrap";
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
 import React from 'react';
 
+import { IconContext } from "react-icons";
 import { FaHtml5 , FaCss3Alt, FaReact, FaPython, FaBootstrap } from 'react-icons/fa';
 
 
@@ -65,24 +66,16 @@ const Title = styled.h2`
     &{
         font-size: 28px;
         color: #04C740;
-        text-align: center;
         font-family: times new roman;
         font-style: italic;
-    }
-    @media (max-width: 600px) {
-        text-align: center;
     }
 `;
 
 const Linha = styled(Row)`
     &{
         height: 50%;
-        text-align: center;
         margin-top: auto;
         margin-bottom: 4px;   
-    }
-    @media (max-width: 600px) {
-       
     }
 `;
 
@@ -101,16 +94,9 @@ const Coluna = styled(Col)`
    
 `;
 
-const Degree1 = styled(Col)`
-    margin-bottom: 4px;
-    display: flex;
-    flex-direction: column;
-    align-itmes: center;
-    justify-content: center;
-`;
-
 const Texto = styled.h4`
     &{
+        display: flex;
         margin-right: 40px;
         margin-left: 40px;
         text-indent: 1.5em;
@@ -118,7 +104,9 @@ const Texto = styled.h4`
         font-style: italic;
         font-size: 25px;
         color: #A1A1A6;
-        text-align: left;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
     @media (max-width: 600px) {
         font-size: 18px;
@@ -126,6 +114,59 @@ const Texto = styled.h4`
         align-items: center;
         justify-content: center;
     }
+`;
+
+const animate = keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+`;
+
+const HtmlIcon = styled(FaHtml5)`
+   animation: ${animate} 10s linear infinite;
+`;
+
+const ReactIcon = styled(FaReact)`
+   animation: ${animate} 10s linear infinite;
+`;
+
+const MyProvider = ({className, children}) => <IconContext.Provider value={{className}}> {children} </IconContext.Provider>
+
+const IconHtml = styled(MyProvider)`
+        color: rgb(221, 75, 37); 
+        font-size: 2.5em;
+        margin-right: 8px;
+        margin-left: 8px;
+`;
+
+const IconCss = styled(MyProvider)`
+        color: rgb(12%, 56%, 100%); 
+        font-size: 2.5em;
+        margin-right: 8px;
+        margin-left: 8px;
+`;
+
+const IconReact = styled(MyProvider)`
+        color: rgb(8%, 45%, 71%); 
+        font-size: 2.5em;
+        margin-right: 8px;
+        margin-left: 8px;
+`;
+
+const IconPy = styled(MyProvider)`
+        color: rgb(0%, 15%, 31%); 
+        font-size: 2.5em;
+        margin-right: 8px;
+        margin-left: 8px;
+`;
+
+const IconBtp = styled(MyProvider)`
+        color: rgb(42%, 21%, 68%); 
+        font-size: 2.5em;
+        margin-right: 8px;
 `;
 
 export const Technologies = () => {
@@ -146,7 +187,22 @@ export const Technologies = () => {
                                 <Texto> HTML, CSS, JavaScript, React, Python, Bootstrap</Texto>
                         </Linha>
                         <Linha>
-                                <Texto><FaHtml5 /> <FaCss3Alt /> < FaReact /> <FaPython /> < FaBootstrap /></Texto>
+                                <IconHtml>
+                                    <HtmlIcon />
+                                </IconHtml>
+                                <IconCss>
+                                    <FaCss3Alt />
+                                </IconCss>
+                                <IconReact>
+                                    < ReactIcon />
+                                </IconReact>
+                                <IconPy>
+                                    <FaPython />
+                                </IconPy>
+                                <IconBtp>
+                                    < FaBootstrap />
+                                </IconBtp>
+                                
                         </Linha>
                     </Card2>
                </Coluna>

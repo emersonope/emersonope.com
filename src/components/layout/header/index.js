@@ -33,15 +33,15 @@ const NeonLine = styled.div`
 
 const TopHeader = () => {
     return(
-      <Cont fluid  >
-        <RowTopH>
-          <Col>
-            <IconContext.Provider value={{ color: "#A1A1A6", size: "1.8em" }}>
-              <FaLinkedinIn onClick={() => window.open('https://www.linkedin.com/in/emersonope/')} style={{paddingLeft: 10, cursor: 'pointer',}} />
-              <FaGithub onClick={() => window.open('https://github.com/emersonope')} style={{paddingLeft: 10, cursor: 'pointer',}} />
-            </IconContext.Provider> 
-          </Col>
-        </RowTopH>
+      <Cont fluid >
+          <RowTopH>
+            <Col>
+              <IconContext.Provider value={{ color: "#A1A1A6", size: "1.8em" }}>
+                <FaLinkedinIn onClick={() => window.open('https://www.linkedin.com/in/emersonope/')} style={{paddingLeft: 10, cursor: 'pointer',}} />
+                <FaGithub onClick={() => window.open('https://github.com/emersonope')} style={{paddingLeft: 10, cursor: 'pointer',}} />
+              </IconContext.Provider> 
+            </Col>
+          </RowTopH>
         <NeonLine />
       </Cont>
     );
