@@ -77,6 +77,7 @@ const Title = styled.h2`
 const Linha = styled(Row)`
     &{
         height: 50%;
+        margin: 0;
         margin-top: auto;
         margin-bottom: 4px;   
     }
