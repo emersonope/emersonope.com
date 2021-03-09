@@ -1,9 +1,11 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Table } from "react-bootstrap";
 import styled from 'styled-components';
 
 import React from 'react';
 
-import { BiRightArrow } from "react-icons/bi";
+import { IconContext } from "react-icons";
+import { MdWork } from 'react-icons/md';
+import { FaTasks, FaRegCalendarAlt } from 'react-icons/fa';
 
 const Card = styled.div`
     &{  
@@ -27,6 +29,7 @@ const Card = styled.div`
 const Card2 = styled.div`
     &{  
         width: 100%;
+        text-align: left;
         border-radius: 20px;
     } 
     @media (max-width: 600px) {
@@ -80,11 +83,7 @@ const Coluna = styled(Col)`
 
 const Texto = styled.h4`
     &{
-        margin-right: 40px;
-        margin-left: 40px;
-        font-size: 20px;
-        color: #A1A1A6;
-        text-align: left;
+        font-weigth: bolder;
     }
     @media (max-width: 600px) {
         font-size: 18px;
@@ -98,6 +97,39 @@ const Logo = styled.img`
     margin-bottom: 20px;
 `;
 
+const Tab = styled(Table)``;
+
+const TabTd = styled.td`
+    &{
+        border-top: none !important;
+        color: #E1E1E6;
+    }
+    &:hover {
+        color: #8257E6;
+    }
+
+`;
+
+const TabTh = styled.th`
+    border-top: none !important;
+`;
+
+const MyProvider = ({className, children}) => <IconContext.Provider value={{className}}> {children} </IconContext.Provider>
+
+const IconFacu = styled(MyProvider)`
+        color: rgb(0%, 15%, 31%); 
+        font-size: 2em;
+`;
+
+const IconColegio = styled(MyProvider)`
+    color: rgb(65%, 49%, 33%);
+    font-size: 2em;
+`;
+
+const IconData = styled(MyProvider)`
+    color: rgb(58%, 24%, 49%);
+    font-size: 2em;
+`;
 
 export const CardUm = (props) => {
 
@@ -112,11 +144,58 @@ export const CardUm = (props) => {
                 </Coluna>
                 <Coluna xl={5}>
                         <Card2>
-                            <Texto> <BiRightArrow /> {props.cargo}</Texto>
-                            <Texto> <BiRightArrow /> {props.funcao}</Texto>
-                            <Texto> <BiRightArrow /> {props.funcao1}</Texto>
-                            <Texto> <BiRightArrow /> {props.funcao2}</Texto>
-                            <Texto> <BiRightArrow /> {props.funcao3}</Texto>
+                            <Tab>
+                                <tbody>
+                                <tr>
+                                    <TabTh>
+                                        <IconFacu >
+                                            <MdWork  />
+                                        </IconFacu>
+                                    </TabTh>
+                                    <TabTd> <Texto>{props.cargo}</Texto></TabTd>
+                                </tr>
+                                <tr>
+                                    <TabTh>
+                                        <IconColegio >
+                                            <FaRegCalendarAlt />
+                                        </IconColegio>
+                                    </TabTh>
+                                    <TabTd> {props.data} </TabTd>
+                                </tr>
+                                <tr>
+                                    <TabTh>
+                                        <IconData >
+                                            <FaTasks />
+                                        </IconData>
+                                    </TabTh>
+                                    <TabTd> {props.funcao} </TabTd>
+                                </tr>
+                                <tr>
+                                    <TabTh>
+                                        <IconData >
+                                            <FaTasks />
+                                        </IconData>
+                                    </TabTh>
+                                    <TabTd> {props.funcao1} </TabTd>
+                                </tr>
+                                <tr>
+                                    <TabTh>
+                                        <IconData >
+                                            <FaTasks />
+                                        </IconData>
+                                    </TabTh>
+                                    <TabTd> {props.funcao2} </TabTd>
+                                </tr>
+                                <tr>
+                                    <TabTh>
+                                        <IconData >
+                                            <FaTasks />
+                                        </IconData>
+                                    </TabTh>
+                                    <TabTd> {props.funcao3} </TabTd>
+                                </tr>
+                            </tbody>
+                        </Tab> 
                         </Card2>
                 </Coluna>
             </Linha>

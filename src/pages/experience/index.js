@@ -22,13 +22,15 @@ const Skills = () => {
     <Section1>
       <Card1 img={Pirelli} texto={'Pirelli Comercial de Pneus Brasil Ltda'} 
       cargo={'Risk Management Intern'}
-      funcao='Gestão de Riscos e Sinistros'
+      data={'Jan/2018 até Jan/2019'}
+      funcao='Gestão de Sinistros'
       funcao1='Gerenciamento de Seguros e Pagamentos'
       funcao2='Gestão de Riscos'
       funcao3='Forecast mensal' />
 
       <Card1 img={Nextel} texto={'Nextel Telecomunicações Ltda'} 
       cargo={'Budget and Planning Intern'}
+      data={'Jan/2019 até Dez/2019'}
       funcao='Análise e Validação de Faturamento'
       funcao1='Contas a Pagar e Receber'
       funcao2='Gerenciamento de Fluxo de Caixa'
