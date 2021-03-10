@@ -42,7 +42,6 @@ const Card1 = styled.div`
    
 `;
 
-
 const Card2 = styled.div`
     &{  
         display: flex;
