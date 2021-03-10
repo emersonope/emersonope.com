@@ -22,7 +22,7 @@ export const Menu = (props) => {
     `;
 
     const ItensMenu = styled(Nav.Link)`
-      font-size: 23px;
+      font-size: 23px;font-size: 23px;
       font-weight: bold;
       padding: 0px;
       color: #E1E1E6 !important;

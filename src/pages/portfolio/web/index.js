@@ -2,8 +2,10 @@ import styled from 'styled-components';
 
 import Card from '../card/card';
 
-import Pirelli from '../../../assets/images/experiences/pirelli-logo.png';
-import Nextel from '../../../assets/images/experiences/nextel-logo.png';
+import Assegura from '../../../assets/images/portifolio/web/assegura1.png';
+import Assegura1 from '../../../assets/images/portifolio/web/assegura2.png';
+import Assegura2 from '../../../assets/images/portifolio/web/assegura3.png';
+
 
 const Section1 = styled.div`
   justify-content: center;
@@ -23,12 +25,10 @@ const PageWeb = () => {
       <Section1>
         <Title>Web</Title>
 
-        <Card texto={'Descricao Projeto'}
-        img1={Pirelli} img2={Nextel} 
+        <Card titulo={'Assegura LGBTQIA+'} texto={'Projeto realizado ao longo de 6 meses em parceria com outros 5 Devs, criado em ReactJs, com banco de dados em relacional MySQL e o back-end em NodeJs.'}
+        img1={Assegura} img2={Assegura1} img3={Assegura2}
         end={'https://github.com/emersonope'}
         aplicacao={'https://github.com/emersonope/Recode-Pro/tree/06-CavaleiroJedi-React'} />
-
-        <Title>Mobile</Title>
 
       </Section1>
     );
