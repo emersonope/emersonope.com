@@ -15,7 +15,7 @@ const Card = styled.div`
         margin-bottom: 0px;
         margin-right: auto;
         margin-left: auto;
-        padding: 30px;
+        padding: 0;
         border-radius: 20px;
         overflow: hidden;
     }
@@ -50,7 +50,7 @@ const Card2 = styled.div`
         align-items: center;
         justify-content: center;
         margin-top: 0px;
-        padding: 1px;
+        padding: 0px;
         border-radius: 20px;
         overflow: hidden;
     }
