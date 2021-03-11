@@ -13,6 +13,7 @@ export const Menu = (props) => {
       font-family: times new roman;
       font-style: italic;
       color: #04C740;
+      cursor: pointer;
     `;
 
     const NavMenu = styled(Navbar.Collapse)`
@@ -61,7 +62,7 @@ export const Menu = (props) => {
         <Container>
   
           <Navbar.Brand>
-            <Title>Dev. FullStack</Title>
+            <Title onClick={() => history.push(`/${""}`)}>Dev. FullStack</Title>
           </Navbar.Brand>
   
           <Toggle aria-controls="responsive-navbar-nav">
