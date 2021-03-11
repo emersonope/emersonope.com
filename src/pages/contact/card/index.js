@@ -97,6 +97,7 @@ const Carrosel = styled(Carousel)`
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 10px;
+    border-radius: 30px;
     @media (max-width: 800px) {
         max-width: 270px;
     }
@@ -206,7 +207,7 @@ const CardContato = (props) => {
                     </Linha>                   
                 </Coluna>
                 <Coluna xl={12}>
-                    <Carrosel showArrows={false} infiniteLoop={true} autoPlay={true} showThumbs={false} showStatus={false} showIndicators={false}>
+                    <Carrosel fade interval={5000} showArrows={false} infiniteLoop={true} autoPlay={true} showThumbs={false} showStatus={false} showIndicators={false}>
                         <Imagens src={props.img1} alt="" />
                         <Imagens src={props.img2} alt="" />
                         <Imagens src={props.img3} alt="" />
