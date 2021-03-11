@@ -35,7 +35,7 @@ const Card = () => {
         <CardBack texto={'Com utilização da liguagem SQL como interface, O MySQL é um dos sistemas de gerenciamento de banco de dados mais utilizados do mundo.'} tec={'Clique para saber mais'}
         img={Back2} 
         end={'https://github.com/emersonope'}
-        aplicacao={'https://github.com/emersonope/Recode-Pro/tree/12-Yoda-ReactNative'} />
+        aplicacao={'https://github.com/emersonope/Recode-Pro/tree/07-CavaleiroJedi-NodeAPI'} />
 
         <CardBack texto={'Aplicativo de redes escalonáveis, com um tempo de execução em JavaScript baseado em eventos.'} tec={'Clique para saber mais'}
         img={Back3} 
