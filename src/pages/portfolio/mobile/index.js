@@ -28,7 +28,7 @@ const PageMobile = () => {
         <Card titulo={'App Boomsell'} texto={'Projeto de e-commerce criado durante o aprendizado de React Native'}
         img1={Mobile} img2={Mobile1} img3={Mobile2}  img4={Mobile3}
         end={'https://github.com/emersonope'}
-        aplicacao={'https://github.com/emersonope/Recode-Pro/tree/06-CavaleiroJedi-React'} />
+        aplicacao={'https://github.com/emersonope/Recode-Pro/tree/12-Yoda-ReactNative'} />
 
       </Section1>
     );

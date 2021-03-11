@@ -101,6 +101,9 @@ const TabTd = styled.td`
         justify-content: center;
         text-align: center;
         align-items: center;
+        font-size: 18px;
+        font-family: times new roman;
+        font-style: italic;
         color: #E1E1E6;
     }
     &:hover {
@@ -116,6 +119,8 @@ const TabTh = styled.th`
     text-align: center;
     align-items: center;
     font-size: 28px;
+    font-family: times new roman;
+    font-style: italic;
     margin-top: 0;
     color: #E1E1E6;
 `;

@@ -28,7 +28,7 @@ const PageWeb = () => {
         <Card titulo={'Assegura LGBTQIA+'} texto={'Projeto realizado ao longo de 6 meses em parceria com outros 5 Devs, criado em ReactJs, com banco de dados em relacional MySQL e o back-end em NodeJs.'}
         img1={Assegura} img2={Assegura1} img3={Assegura2}
         end={'https://github.com/emersonope'}
-        aplicacao={'https://github.com/emersonope/Recode-Pro/tree/06-CavaleiroJedi-React'} />
+        aplicacao={'https://github.com/squad4spm'} />
 
       </Section1>
     );
