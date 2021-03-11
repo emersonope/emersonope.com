@@ -2,6 +2,8 @@ import { Col, Row, Table } from "react-bootstrap";
 import styled from 'styled-components';
 
 import React from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 import { IconContext } from "react-icons";
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
@@ -86,6 +88,27 @@ const Texto = styled.h4`
     }
     &:hover {
         color: #8257E6;
+    }
+`;
+
+const Carrosel = styled(Carousel)`
+    width: 320px;
+    height: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    @media (max-width: 800px) {
+        max-width: 270px;
+    }
+`;
+
+const Imagens = styled.img`
+    width: 320px;
+    height: 340px;
+    margin-bottom: 0;
+    border-radius: 30px;
+    @media (max-width: 800px) {
+        max-width: 290px;
     }
 `;
 
@@ -181,6 +204,14 @@ const CardContato = (props) => {
                             </tbody>
                         </Tab>                     
                     </Linha>                   
+                </Coluna>
+                <Coluna xl={12}>
+                    <Carrosel showArrows={false} infiniteLoop={true} autoPlay={true} showThumbs={false} showStatus={false} showIndicators={false}>
+                        <Imagens src={props.img1} alt="" />
+                        <Imagens src={props.img2} alt="" />
+                        <Imagens src={props.img3} alt="" />
+                        <Imagens src={props.img4} alt="" />
+                    </Carrosel>
                 </Coluna>
             </Linha>
         </Card>
