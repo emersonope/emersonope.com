@@ -53,13 +53,9 @@ const Card2 = styled.div`
         border-radius: 20px;
         overflow: hidden;
     }
-    &:after {
-        filter: blur(15px);
-    }
     @media (max-width: 600px) {
         height: 100%;
         width: 100%;
-
         align-items: center;
     }
 `;
@@ -156,7 +152,7 @@ const bounce1 = keyframes`
 
 
 const goBack = keyframes`
-    0% { transform: translateX(4px);; }
+    0% { transform: translateX(4px); }
     50% { transform: translateX(0); }
     100% {transform: translateX(4px); }
 `;
