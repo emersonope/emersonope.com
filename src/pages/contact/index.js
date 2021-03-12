@@ -22,8 +22,8 @@ const Contact = () => {
             foto={ImgFoto} texto={'HTML, CSS, JavaScript, Nodejs, React, Python, Bootstrap'} 
             texto1={''} />
 
-            <CardContato  titulo='Links Úteis' whats={'WhatsApp: (11) 9 5214 3624'}
-            github={'github: @emersonope'} ln={'Linkedin: @emersonope'} email={'email: emersonope@gmail.com'} 
+            <CardContato  titulo={'Links e QR Code'} whats={'WhatsApp: (11) 9 5214 3624'}
+            github={'Github: @emersonope'} ln={'Linkedin: @emersonope'} email={'Email: emersonope@gmail.com'} 
             git={'https://github.com/emersonope'}
             lnk={'https://www.linkedin.com/in/emersonope/'}
             mail={'emersonope@gmail.com'} 

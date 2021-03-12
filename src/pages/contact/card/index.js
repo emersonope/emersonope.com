@@ -97,9 +97,11 @@ const Carrosel = styled(Carousel)`
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 10px;
-    border-radius: 30px;
+    border-radius: 25px;
     @media (max-width: 800px) {
-        max-width: 270px;
+        width: 100%;
+        max-height: 260px;
+        max-width: 260px;
     }
 `;
 
@@ -107,9 +109,10 @@ const Imagens = styled.img`
     width: 320px;
     height: 340px;
     margin-bottom: 0;
-    border-radius: 30px;
+    border-radius: 25px;
     @media (max-width: 800px) {
-        max-width: 290px;
+        max-height: 270px;
+        max-width: 270px;
     }
 `;
 
