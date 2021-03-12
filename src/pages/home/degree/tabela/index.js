@@ -46,6 +46,9 @@ const Tab = styled(Table)``;
 const TabTd = styled.td`
     &{
         border-top: none !important;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
         color: #E1E1E6;
     }
     &:hover {
@@ -55,6 +58,8 @@ const TabTd = styled.td`
 `;
 
 const TabTh = styled.th`
+    justify-content: center;
+    align-items: center;
     border-top: none !important;
 `;
 
