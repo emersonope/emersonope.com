@@ -24,9 +24,6 @@ const Card = styled.div`
         background: #343A40;
         overflow: hidden;
     }
-    &:after {
-        filter: blur(15px);
-    }
     @media (max-width: 600px) {
         max-width: 310px;
         text-align: left;
@@ -97,7 +94,7 @@ const Carrosel = styled(Carousel)`
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 10px;
-    border-radius: 25px;
+    border-radius: 15px;
     @media (max-width: 800px) {
         width: 100%;
         max-height: 260px;
@@ -109,7 +106,7 @@ const Imagens = styled.img`
     width: 320px;
     height: 340px;
     margin-bottom: 0;
-    border-radius: 25px;
+    border-radius: 15px;
     @media (max-width: 800px) {
         max-height: 270px;
         max-width: 270px;

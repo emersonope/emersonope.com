@@ -9,7 +9,7 @@ import { FaHtml5 , FaCss3Alt, FaReact, FaNodeJs, FaPython, FaBootstrap  } from '
 const Section1 = styled.div`
     justify-content: center;
     align-items: center;
-    margin: 50px 20px 0;
+    margin: 15px 20px 0;
 `;
 
 const Title = styled.h2`
