@@ -94,10 +94,12 @@ const Carrosel = styled(Carousel)`
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 10px;
-    background-color: transparent;
+    border-radius: 50%;
+    background-color: #343A40;
     @media (max-width: 800px) {
         width: 100%;
-        background-color: transparent;
+        border-radius: 50%;
+        background-color: #343A40;
         max-height: 260px;
         max-width: 260px;
     }
@@ -108,9 +110,7 @@ const Imagens = styled.img`
     height: 340px;
     margin-bottom: 0;
     border-radius: 20px;
-    background-color: transparent;
     @media (max-width: 800px) {
-        background-color: transparent;
         max-height: 270px;
         max-width: 270px;
     }
